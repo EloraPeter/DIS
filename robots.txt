@@ -1,0 +1,23 @@
+# Allow all web crawlers full access
+User-agent: *
+Disallow:
+
+# Block web crawlers from accessing the admin panel and other sensitive areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /settings/
+
+# Block crawlers from accessing temporary files and folders
+Disallow: /temp/
+Disallow: /backup/
+
+# Block crawlers from accessing the scripts folder
+Disallow: /scripts/
+
+# Allow Googlebot to crawl everything (in case of specific rules for other bots)
+User-agent: Googlebot
+Disallow:
+
+# Sitemap location
+Sitemap: https://www.datainsightsolution.com/sitemap.xml
