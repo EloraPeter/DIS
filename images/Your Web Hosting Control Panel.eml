@@ -1,0 +1,171 @@
+Delivered-To: florenceonyi09@gmail.com
+Received: by 2002:a54:26c1:0:b0:266:5c24:7c84 with SMTP id c1csp1422558ecp;
+        Sun, 21 Jul 2024 07:52:18 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH8rNaI0zd6q/kPHTV8V5udAgRkJnqVvoUoeFY7Gg61hQRUw70CQ4z9gWxnr6Yap/iAGxDb
+X-Received: by 2002:a5d:6187:0:b0:369:8a8c:fd24 with SMTP id ffacd0b85a97d-369bae25215mr3119561f8f.37.1721573538474;
+        Sun, 21 Jul 2024 07:52:18 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1721573538; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=NOA/byV/92ogQQoES570m4xAKjyOCQYeq2zOo3nUGeODoysIxFZiGun0ct5zBM/Ml9
+         pt4uu/6JLjZTfX8BG0WbU9d43bnIqyPbYuuvCdAkqLPluTHxFiEEQohTg60vFK5PSySg
+         lXA6029Irt1Pr1zgc2UG0y5DO3o6CncS136wF8+dngwPdMY/+ABs4DqZXxS3IEKk5eHR
+         sRTjfWsjbwJiPF9qpT+yL7sruvAQYk6hakhf+Ki6WI0gDLlyUwgvoTzmTzpaGdXQ+Yos
+         BDXClXskns+THuzsEWJvJ5xaCh7E5hbZzpL7P2lmH5HYX3nL6mfE0SP16ylIlwKSchh6
+         VHug==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:from:subject:to:dkim-signature;
+        bh=S3QneZ+1QndFacmb+ffawfvhHKQ3Lh7dg+dmiFyoHWs=;
+        fh=JlXD+nw3Jfy7vEDOoKuTLXpiMbf1FK6LHhdblHuBRes=;
+        b=eODM/Wzjz4ZdOY9J76LnvsSqOwHzXvfwUaM/hVsTTASYfTmQ5MCULOeNdDtzgIc2eU
+         pORyX6dbztBFcPBD0llPHRYVOzNmI4xcSwch5OgH+BugJASMj56o6g7vyO7+9wJelQYd
+         zTdRrmywLUnCUaMdu/vAqhj6AuwKYYyG7Pu4zB9TSVg0x2bHLXmmz0xblbdRj3ydfKH5
+         5zW67L1k+ZeJ6ATipwOCEuLwvFNVDrvy2iQN8/XxbxQm9pZIAz4eLNlMCFjCMySbKXjE
+         FzWUVErDWAZrrqpKSuyzEJ6nBj5wy0xKe3/yn88aRYq1AqVL8zaUYfZ6A217kDnSnE+s
+         c46A==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@beak.host header.s=s1 header.b=GPbyAdjC;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of support@beak.host designates 45.8.227.11 as permitted sender) smtp.mailfrom=support@beak.host;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=beak.host
+Return-Path: <support@beak.host>
+Received: from infrarelay1.stackmail.com (infrarelay1.stackmail.com. [45.8.227.11])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-36878664e1bsi2186429f8f.90.2024.07.21.07.52.18
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 21 Jul 2024 07:52:18 -0700 (PDT)
+Received-SPF: pass (google.com: domain of support@beak.host designates 45.8.227.11 as permitted sender) client-ip=45.8.227.11;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@beak.host header.s=s1 header.b=GPbyAdjC;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of support@beak.host designates 45.8.227.11 as permitted sender) smtp.mailfrom=support@beak.host;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=beak.host
+ARC-Seal: i=1; cv=none; a=rsa-sha256; d=infrarelay1.stackmail.com; s=s1;
+	 b=ZCk2A+TQZBxawbnNOJJ6/H2cUITBsVuuns+qT3r8GxDZkeJUEYm7ZXZC3ed2y5clmlUa0s2mf+
+	  +HbjyUM0gPfEW19PzrytzWbNtr/xHaPqW0HSF1yeNVesu5MUBqAA7ZixHOpYUh+Vww8vl4VVnI
+	  IdB/EBv/qET0VFOlYtqIG5vK74NPXMxqdX05dwUN1iW4C5+s/yeVF7NI7rX4gYDyFITyun0UEG
+	  /TZ5qY8hdFmdJLBNNXUHsHkHr6yna+DGu9PPRCRQiJTcvPySX+b/OfSLal+fONA/XOFZxhVyU4
+	  pjBHg6HbBiXVGFbwSz7cIqQmsGSQXkDBhy/nc/afFgBIrA==;
+ARC-Authentication-Results: i=1; infrarelay1.stackmail.com; smtp.remote-ip=10.1.14.72;
+	iprev=pass (ss3.lhr.stackcp.net) smtp.remote-ip=10.1.14.72
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed; d=infrarelay1.stackmail.com; s=s1;
+	bh=S3QneZ+1QndFacmb+ffawfvhHKQ3Lh7dg+dmiFyoHWs=;
+	h=Date:Message-ID:From:Content-Type:Subject:To:DKIM-Signature;
+	b=omqiWqO4OTHwzU4XO0dCmxX3cFO2lNyDDUQK5OOx8+6qN9TWLD6dvCrJnk5iTGSVRuVkwbmIdk
+	  V1U4EOpudaAS4/TF3ZzT8dCNLD9gJKjA258QJcW7Z+zbmFsv9aLNzQsvDBhIuoPpOymuqjM3hc
+	  FoKKXKJlsO+WcHFbJ1RL5vSzTT6QMYF3wyEpfPJF15i/Sm4Z0qn5HQOuwJmSF5EkodKzyxInap
+	  D9Gd6Jk5o1m1r8xbghWaBlN3hAlc1yZmmcrnp//AtAtZ9nedzG8O6aOBWIdoeeMHqL8NRQKnXA
+	  ozU07oJw/OXK03InrghBOgm5fghWXaQkmK0/ThXo4/un/g==;
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=beak.host;
+	s=s1; h=Date:Message-Id:From:Content-Type:Subject:To:Sender:Reply-To:Cc:
+	MIME-Version:Content-Transfer-Encoding:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=S3QneZ+1QndFacmb+ffawfvhHKQ3Lh7dg+dmiFyoHWs=; i=@beak.host; t=1721573538;
+	x=1721659938; b=GPbyAdjCLrkZmBk5bdHfJKVf3b04okd8Hocz2YrUQqKD5d7dZEqN5tz5CN764
+	nUpeG3U2vFgt7J9blIkU4N21yHjs+2NyQTPLp8UacmZfJhp1YSKLw+oztT3I8KBb0Zz27qjt9RJNQ
+	fAj0m3QgxcCbJOig/OPagxTloTYrTqgl9Yle+UcezzDSFfM7x/coQFH1iosj0jhCbImBwzahI4XGB
+	oF7KqgPEIN+Ty2ERwY6dR0PXawDL7ch/jbiYotixRLJ6qwD91CHjoTHImCKN71/lQgkETVut7CcIL
+	62p5e5rqS/6CcVn9aqvupI2g/m8iqV5LkSsWGWpr3yTx9QG0WA==;
+Authentication-Results: infrarelay1.stackmail.com;
+	iprev=pass (ss3.lhr.stackcp.net) smtp.remote-ip=10.1.14.72
+Received: from ss3.lhr.stackcp.net ([10.1.14.72])
+	by infrarelay1.stackmail.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.97.1)
+	(envelope-from <support@beak.host>)
+	id 1sVXv7-000000004As-45q7;
+	Sun, 21 Jul 2024 15:52:18 +0100
+Received: from git-website by ss3.lhr.stackcp.net with local (Exim 4.97.1)
+	(envelope-from <support@beak.host>)
+	id 1sVXv7-000000008Fq-3sdR;
+	Sun, 21 Jul 2024 15:52:17 +0100
+To: florence ofuokwu <florenceonyi09@gmail.com>
+Subject: Your Web Hosting Control Panel
+Content-Type: text/html; charset="UTF-8"; charset="UTF-8"; charset="UTF-8"; charset="UTF-8"; charset="UTF-8"
+From: HostBeak Support <support@beak.host>
+Message-Id: <E1sVXv7-000000008Fq-3sdR@ss3.lhr.stackcp.net>
+Date: Sun, 21 Jul 2024 15:52:17 +0100
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p>&#8203;&#8203;</p>
+<table style="font-family: 'Segoe UI', 'Segoe WP', 'Segoe UI WPC', Tahoma, Arial, sans-serif; color: #555;" border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#e9ecef">
+<tbody>
+<tr>
+<td>&#160;</td>
+</tr>
+<tr>
+<td align="center" valign="top">&#8203;&#8203;&#8203;&#8203;
+<table border="0" width="600" cellspacing="0" cellpadding="20">
+<tbody>
+<tr>
+<td align="center"><img src="https://app.beak.host/brandLogo" height="50" /><h1>HostBeak Hosting Panel</h1>
+</td>
+</tr>
+<tr>
+<td valign="top" bgcolor="#fff">&#8203;
+<p>Hi florence ofuokwu,</p>
+<p>Welcome to your new web hosting panel with HostBeak.</p>
+<p>This email contains important information about your hosting account, so we recommend that you save it for future reference.</p>
+<p>&#160;</p>
+<p><strong>Your Hosting</strong></p>
+<p>Domain Name: datainsightsolution.com</p>
+<p>Account Setup Date: 21/07/2024</p>
+<p>Web Hosting Package Type: Mega</p>
+<p>&#160;</p>
+<p><strong>Hosting Control Panel</strong>&#160;</p>
+<p>Username: datainsightsolution.com</p>
+<p>Password: k|xF}Z7JvT&gt;g&#160;</p>
+<p>Control Panel Login: <a href="https://app.beak.host">https://app.beak.host</a></p>
+<p>&#160;</p>
+<p><strong>FTP</strong></p>
+<p>Username: datainsightsolution.com&#160;</p>
+<p>Password: k|xF}Z7JvT&gt;g&#160;</p>
+<p>Server: ftp.datainsightsolution.com</p>
+<p>To transfer your website files, you can use FTP.</p>
+<p>This needs to be unlocked first.&#160;</p>
+<p>You can do this in HostBeak Hosting Panel, using these credentials:</p>
+<p>&#160;</p>
+<p><strong>Email</strong></p>
+<p>Incoming Mail Server: mail.datainsightsolution.com&#160;</p>
+<p>Outgoing Mailserver: mail.datainsightsolution.com&#160;</p>
+<p>Webmail URL: <a href="http://mail.beak.host">http://mail.beak.host</a></p>
+<p>&#160;</p>
+<p><strong>Notice:</strong></p>
+<p>If your site is not up immediately, it could be because your domain name is currently propagating and you might need to wait for 30 mins to 2 hours, especially .ng, .com.ng</p>
+<p>OR</p>
+<p>If this domain name was bought elsewhere, you need to point to these nameservers:</p>
+<p><strong>ns1.beak.host</strong></p>
+<p><strong>ns2.beak.host</strong></p>
+<p><strong>ns3.beak.host</strong></p>
+<p><strong>ns4.beak.host</strong></p>
+<p>&#160;</p>
+<p><strong>SSL:</strong></p>
+<p>SSL can only be activated after the domain name has fully propagated.</p>
+<p>You can activate and force SSL by accessing <strong>SSL/TLS </strong>page in your control panel.</p>
+<p>&#160;</p>
+<p>You can configure your email by logging in to HostBeak Hosting Panel, and selecting &#8220;Email accounts&#8221;</p>
+<p></p>
+<p>Thanks for your business.</p>
+<p>HostBeak</p>
+</td>
+</tr>
+<tr>
+<td style="font-size: 10pt;" align="center"><a href="https://twitter.com/hostbeak"><img src="https://app.beak.host/assets/images/email/social-media/twitter.png" alt="Twitter" width="32" height="32" /></a> <a href="https://facebook.com/hostbeak"><img src="https://app.beak.host/assets/images/email/social-media/facebook.png" alt="Facebook" width="32" height="32" /></a> <a href="https://www.instagram.com/hostbeak"><img src="https://app.beak.host/assets/images/email/social-media/instagram.png" alt="Instagram" width="32" height="32" /></a> <a href="https://www.youtube.com/channel/UC3tCIhb5zDaBR8QhdFIxb9w"><img src="https://app.beak.host/assets/images/email/social-media/youtube.png" alt="YouTube" width="32" height="32" /></a> <a href="https://www.linkedin.com/company/hostbeak"><img src="https://app.beak.host/assets/images/email/social-media/linkedin.png" alt="Linkedin" width="32" height="32" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
