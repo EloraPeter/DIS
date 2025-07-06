@@ -62,7 +62,7 @@ nav .nav-links ul li {
 }
 
 nav .nav-links ul li:hover {
-    background-color: #00bcd4;
+    /* background-color: #00bcd4; */
     box-shadow: 5px 5px 2px 0px rgba(0, 0, 0, 0.75);
 }
 
