@@ -149,6 +149,47 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+    // Contact form submission via Formspree with reCAPTCHA
+    const contactForm = document.getElementById("contact-form");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const captcha = grecaptcha.getResponse();
+
+            if (!captcha) {
+                alert("Please complete the CAPTCHA.");
+                return;
+            }
+
+            const formData = new FormData(form);
+            formData.append("g-recaptcha-response", captcha);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: { Accept: "application/json" }
+                });
+
+                if (response.ok) {
+                    alert("Message sent successfully!");
+                    form.reset();
+                    grecaptcha.reset(); // Reset the CAPTCHA
+                } else {
+                    alert("Failed to send message. Please try again.");
+                }
+            } catch (error) {
+                console.error("Submission error:", error);
+                alert("Something went wrong. Please try again later.");
+            }
+        });
+    }
+
+
+
     // Sticky navigation on scroll
     const navLinks = document.querySelector('header nav');
     let lastScrollTop = 0;
