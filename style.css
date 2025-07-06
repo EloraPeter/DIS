@@ -16,7 +16,8 @@ body {
 /* ----------------------------------------------------------HOMEPAGE---------------------------------------------------------------- */
 /* ----------navbar----------------------- */
 nav {
-    background: rgba(255, 255, 255, 0.15);
+    background-color: #1f5997;
+    /* background: rgba(255, 255, 255, 0.15); */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -31,7 +32,7 @@ nav {
     z-index: 1000;
     transition: top 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 20px 20px;
+    /* border-radius: 0 0 20px 20px; */
 }
 
 nav.sticky {
