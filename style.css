@@ -177,7 +177,7 @@ header {
 header #hero {
     background-image: linear-gradient(rgba(67, 94, 199, 0.5),
             rgba(50, 70, 150, 0.5)),
-        url("images/header\ background.jpg");
+        url("images/hero-background.png");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
