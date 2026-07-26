@@ -11,7 +11,7 @@ function showMenu() {
 }
 
 function hideMenu() {
-    navLinks.style.right = "-200px"; // Move the sidebar out of view
+    navLinks.style.right = "-260px"; // Move the sidebar out of view
     setTimeout(function () {
         navLinks.style.display = "none"; // Hide the sidebar after it has moved out
         openMenuIcon.style.display = "block"; // Show the menu icon again
@@ -272,7 +272,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => {
             const answer = question.nextElementSibling;
-            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+            const expanded = question.getAttribute('aria-expanded') === 'true';
+            question.setAttribute('aria-expanded', String(!expanded));
+            answer.style.display = expanded ? 'none' : 'block';
         });
     });
 });
