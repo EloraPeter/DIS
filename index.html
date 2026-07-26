@@ -2,26 +2,26 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PHN02KBHFR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PHN02KBHFR');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHN02KBHFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PHN02KBHFR');
+  </script>
   <meta charset="UTF-8" />
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-57VSG645');</script>
-<!-- End Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-57VSG645');</script>
+  <!-- End Google Tag Manager -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Unlock data-driven insights with DIS Ltd. Our expert solutions help you make informed decisions and drive business growth. Learn more today!">
+  <meta name="description"
+    content="Unlock data-driven insights with DIS Ltd. Our expert solutions help you make informed decisions and drive business growth. Learn more today!">
   <title>Data Insight Solutions - Home</title>
   <link rel="canonical" href="https://www.datainsightsolution.com/index.html" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
@@ -29,36 +29,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
   </style>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57VSG645"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57VSG645" height="0" width="0"
+      style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-  <nav>
-    <a href="index.html"><img src="images/logo.png" alt="Data Insight Solutions logo" /></a>
+  <nav aria-label="Primary">
+    <a href="index.html" aria-label="Data Insight Solutions home"><img src="images/logo.png"
+        alt="Data Insight Solutions logo" /></a>
     <div class="nav-links" id="navLinks">
-      <i class="fa-solid fa-xmark" id="closeMenu" onclick="hideMenu()"></i>
+      <i class="fa-solid fa-xmark" id="closeMenu" role="button" tabindex="0" aria-label="Close menu"
+        onclick="hideMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){hideMenu()}"></i>
       <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <!-- <li><a href="case-studies.html">Case Studies</a></li> -->
-          <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
-  </div>
-  <i class="fa-solid fa-bars" id="openMenu" onclick="showMenu()"></i>
-  
+    </div>
+    <i class="fa-solid fa-bars" id="openMenu" role="button" tabindex="0" aria-label="Open menu"
+      onclick="showMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){showMenu()}"></i>
   </nav>
+
   <header>
-    <section id="hero">
+    <section id="hero" aria-label="Introduction">
       <div class="hero-text">
         <h1>Unlock the Power of Data with Data Insight Solutions</h1>
         <p>Empowering businesses with insights and analytics to drive success.</p>
@@ -66,81 +70,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
   </header>
+
   <main>
-    <section id="about-us">
+    <section id="about-us" aria-labelledby="about-us-heading">
       <div class="heading">
-        <h2 style="color: #ff6347; font-size: 40px; text-align: center; margin-top: 35px;">About Us</h2>
+        <h2 id="about-us-heading" class="visually-hidden">About Us</h2>
+        <p class="eyebrow" aria-hidden="true">About Us</p>
       </div>
       <div class="container">
         <div class="hero-content">
-          <h2>D.I.S - Your Trusted Data Partner</h2>
-          <p>Since its inception in 2024, Data Insights Solutions Ltd. has been dedicated to providing cutting-edge data
-            analytics and data science services. We assist companies across various industries, including healthcare,
-            financial services, manufacturing, retail & e-commerce, telecoms, and many others, in building secure and
-            compliant data insights and solutions for both internal and commercial use.</p>
-          <a href="about.html"><button class="cta-button">Learn More</button></a>
+          <h2>D.I.S — Your Trusted Data Partner</h2>
+          <p>Since its inception in 2024, Data Insights Solutions Ltd. has been dedicated to providing cutting-edge
+            data analytics and data science services. We assist companies across various industries, including
+            healthcare, financial services, manufacturing, retail &amp; e-commerce, telecoms, and many others, in
+            building secure and compliant data insights and solutions for both internal and commercial use.</p>
+          <a href="about.html"><button class="cta-button" type="button">Learn More</button></a>
         </div>
         <div class="hero-image">
-          <img src="images/about us page.jpg" alt="about DIS Ltd">
+          <img src="images/about us page.jpg" alt="Data analysts reviewing insights at Data Insight Solutions"
+            loading="lazy" width="600" height="400">
         </div>
       </div>
     </section>
 
-    <section id="why-choose-us">
+    <section id="why-choose-us" aria-labelledby="why-choose-us-heading">
       <div class="wrapper">
         <div class="image">
-          <img src="images/whychoseus.jpg" alt="why choose DIS Ltd">
+          <img src="images/whychoseus.jpg" alt="The Data Insight Solutions team collaborating on a client project"
+            loading="lazy" width="600" height="400">
         </div>
         <div class="content">
-          <h2>Why Choose Us</h2>
+          <h2 id="why-choose-us-heading">Why Choose Us</h2>
           <p>
             We provide customized data solutions tailored to meet the unique needs of each client, leveraging
-            cutting-edge
-            tools and technologies to deliver accurate, efficient, and actionable insights. Our client-centric approach
-            ensures clear communication and alignment with client objectives, resulting in tangible improvements and
-            measurable outcomes.
+            cutting-edge tools and technologies to deliver accurate, efficient, and actionable insights. Our
+            client-centric approach ensures clear communication and alignment with client objectives, resulting in
+            tangible improvements and measurable outcomes.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="business-value">
-      <h2>Delivering Business Value You Can See & <br> Your Customers Can Feel</h2>
+    <section id="business-value" aria-labelledby="business-value-heading">
+      <h2 id="business-value-heading">Delivering business value you can see &amp; your customers can feel</h2>
       <div class="wrapper">
         <div class="value-item">
-          <i class="fa-solid fa-credit-card"></i>
+          <i class="fa-solid fa-credit-card" aria-hidden="true"></i>
           <h3>Reduce Operational Costs</h3>
           <p>Leverage AI-driven analysis to pinpoint opportunities for customers to self-serve and reduce customer
-            service
-            outreach.</p>
+            service outreach.</p>
         </div>
         <div class="value-item">
-          <i class="fa-solid fa-face-smile-beam"></i>
-          <h3>Improve Customer Loyalty & Trust</h3>
-          <p>Use actionable customer journey insights for quicker achievement of desired outcomes and increased brand
-            loyalty.</p>
+          <i class="fa-solid fa-face-smile-beam" aria-hidden="true"></i>
+          <h3>Improve Customer Loyalty &amp; Trust</h3>
+          <p>Use actionable customer journey insights for quicker achievement of desired outcomes and increased
+            brand loyalty.</p>
         </div>
         <div class="value-item">
-          <i class="fa-solid fa-money-bills"></i>
+          <i class="fa-solid fa-money-bills" aria-hidden="true"></i>
           <h3>Increase Revenue</h3>
-          <p>Easily identify & notify your frontline of upsell opportunities for online and in-person interactions.</p>
+          <p>Easily identify &amp; notify your frontline of upsell opportunities for online and in-person
+            interactions.</p>
         </div>
         <div class="value-item">
-          <i class="fa-solid fa-people-group"></i>
+          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
           <h3>Empower Employees</h3>
-          <p>Foster a culture where all employees are connected with your mission to deliver the best experiences.</p>
+          <p>Foster a culture where all employees are connected with your mission to deliver the best experiences.
+          </p>
         </div>
       </div>
-
     </section>
 
-    <section id="services">
+    <section id="services" aria-labelledby="services-heading">
       <div class="container">
         <div class="service-image">
-          <img src="images/our service.jpg" alt="DIS Ltd services">
+          <img src="images/our service.jpg" alt="Dashboard showing Data Insight Solutions analytics services"
+            loading="lazy" width="600" height="450">
         </div>
         <div class="textbox">
-          <h2>Our Services</h2>
+          <h2 id="services-heading">Our Services</h2>
           <ul>
             <li>Data Analysis</li>
             <li>Business Intelligence</li>
@@ -151,26 +159,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>Strategic Consulting</li>
             <li>Training and Support</li>
           </ul>
-          <p><a href="services.html">Get Started<i class="fa-solid fa-arrow-right"></i></a></p>
+          <a href="services.html">Get Started <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
   </main>
+
   <footer id="footer">
     <div class="inner">
       <div class="content">
-        <section>
-          <h3>DATA INSIGHT SOLUTION</h3>
-          <p>Data Insight Solutions Ltd. is a premier data analysis and consulting firm dedicated to transforming data
-            into actionable insights. We pride ourselves on our expertise, innovative approach, and commitment to
-            delivering exceptional value to our clients. By leveraging advanced
-            data analytics techniques and state-of-the-art technology, we help organizations uncover hidden patterns,
-            predict future trends, and make data-driven decisions that propel their success. Our team of experienced
-            professionals is passionate about turning complex data into clear, actionable strategies, ensuring our
-            clients achieve their business goals and maintain a competitive edge in the market.</p>
+        <section aria-labelledby="footer-about">
+          <h3 id="footer-about">DATA INSIGHT SOLUTION</h3>
+          <p>Data Insight Solutions Ltd. is a premier data analysis and consulting firm dedicated to transforming
+            data into actionable insights. We pride ourselves on our expertise, innovative approach, and commitment
+            to delivering exceptional value to our clients. By leveraging advanced data analytics techniques and
+            state-of-the-art technology, we help organizations uncover hidden patterns, predict future trends, and
+            make data-driven decisions that propel their success.</p>
         </section>
-        <section>
-          <h4>Services</h4>
+        <section aria-labelledby="footer-services">
+          <h4 id="footer-services">Services</h4>
           <ul class="alt">
             <li><a href="cookie-policy.html">Cookies Policy</a></li>
             <hr>
@@ -184,42 +191,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <hr>
           </ul>
         </section>
-        <section>
-          <h4>Our Socials</h4>
-                    <ul class="plain">
-                        <li><a href="https://x.com/DataInsightsLtd"><i
-                                    class="fa-brands fa-square-x-twitter"></i>Twitter</a></li>
-                        <li><a href="https://www.facebook.com/profile.php?id=61563690391957"><i
-                                    class="fa-brands fa-square-facebook"></i>Facebook</a></li>
-                        <li><a href="https://www.instagram.com/datainsightsolutionsltd/?hl=en"><i
-                                    class="fa-brands fa-square-instagram"></i>Instagram</a></li>
-                        <li><a href="https://wa.me/2348037024787"><i
-                                    class="fa-brands fa-square-whatsapp"></i>Whatsapp</a></li>
-                        <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope"></i>Email
-                                Us</a></li>
-
-                    </ul>
+        <section aria-labelledby="footer-social">
+          <h4 id="footer-social">Our Socials</h4>
+          <ul class="plain">
+            <li><a href="https://x.com/DataInsightsLtd"><i class="fa-brands fa-square-x-twitter"
+                  aria-hidden="true"></i>Twitter</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61563690391957"><i
+                  class="fa-brands fa-square-facebook" aria-hidden="true"></i>Facebook</a></li>
+            <li><a href="https://www.instagram.com/datainsightsolutionsltd/?hl=en"><i
+                  class="fa-brands fa-square-instagram" aria-hidden="true"></i>Instagram</a></li>
+            <li><a href="https://wa.me/2348037024787"><i class="fa-brands fa-square-whatsapp"
+                  aria-hidden="true"></i>Whatsapp</a></li>
+            <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope"
+                  aria-hidden="true"></i>Email Us</a></li>
+          </ul>
         </section>
       </div>
     </div>
-    <div id="copyright " class="copyright">
-      <p>&copy; <a href="index.html">2024 Data Insight Solutions</a>. All rights reserved.</p>
+    <div class="copyright">
+      <p>&copy; <a href="index.html"><span id="copyright-year">2024</span> Data Insight Solutions</a>. All rights reserved.</p>
       <div class="designer">Design by <a href="#">ELORA</a>.</div>
     </div>
   </footer>
-  <div id="cookiePopup" class="hide">
-    <i class="fas fa-cookie-bite"></i>
+
+  <div id="cookiePopup" class="hide" role="region" aria-label="Cookie notice">
+    <i class="fas fa-cookie-bite" aria-hidden="true"></i>
     <p>
-      Our website uses cookies to enhance your browsing experience and provide relevant information. By continuing to
-      use our website, you agree to our
+      Our website uses cookies to enhance your browsing experience and provide relevant information. By continuing
+      to use our website, you agree to our
       <a href="privacy-policy.html">Privacy Policy</a>,
       <a href="terms-of-service.html">Terms of Service</a>, and
       <a href="cookie-policy.html">Cookie Policy</a>.
     </p>
     <div class="button-group">
-      <button id="acceptCookie">Accept</button>
-      <button id="declineCookie">Decline</button>
-      <button id="settingsCookie">Cookie Settings</button>
+      <button id="acceptCookie" type="button">Accept</button>
+      <button id="declineCookie" type="button">Decline</button>
+      <button id="settingsCookie" type="button">Cookie Settings</button>
     </div>
   </div>
 
