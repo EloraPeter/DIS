@@ -27,9 +27,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
     </style>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -40,30 +42,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-    <nav>
-        <a href="index.html"><img src="images/logo.png" alt="Data Insight Solutions logo" /></a>
+    <nav aria-label="Primary">
+        <a href="index.html" aria-label="Data Insight Solutions home"><img src="images/logo.png" alt="Data Insight Solutions logo" /></a>
         <div class="nav-links" id="navLinks">
-            <i class="fa-solid fa-xmark" id="closeMenu" onclick="hideMenu()"></i>
+            <i class="fa-solid fa-xmark" id="closeMenu" role="button" tabindex="0" aria-label="Close menu" onclick="hideMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){hideMenu()}"></i>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <!-- <li><a href="case-studies.html">Case Studies</a></li> -->
+                <li><a href="services.html" class="active" aria-current="page">Services</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
-        <i class="fa-solid fa-bars" id="openMenu" onclick="showMenu()"></i>
+        <i class="fa-solid fa-bars" id="openMenu" role="button" tabindex="0" aria-label="Open menu" onclick="showMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){showMenu()}"></i>
     </nav>
     <main>
-        <section class="service-page">
+        <section class="service-page" aria-labelledby="services-hero-heading">
             <div class="row">
-                <h1 class="section-heading">Our Services</h1>
+                <h1 class="section-heading" id="services-hero-heading">Our Services</h1>
             </div>
             <div class="row">
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-hammer"></i>
+                            <i class="fas fa-hammer" aria-hidden="true"></i>
                         </div>
                         <h3>Data Collection and Management:</h3>
                         <p>
@@ -75,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-cogs"></i>
+                            <i class="fas fa-cogs" aria-hidden="true"></i>
                         </div>
                         <h3>Data Optimization:</h3>
                         <p>
@@ -89,7 +90,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-brush"></i>
+                            <i class="fas fa-brush" aria-hidden="true"></i>
                         </div>
                         <h3>Data Analysis and Interpretation:</h3>
                         <p>
@@ -101,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-wrench"></i>
+                            <i class="fas fa-wrench" aria-hidden="true"></i>
                         </div>
                         <h3>Data Visualization:</h3>
                         <p>
@@ -116,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-truck-pickup"></i>
+                            <i class="fas fa-truck-pickup" aria-hidden="true"></i>
                         </div>
                         <h3>Strategic Consulting:</h3>
                         <p>
@@ -129,7 +130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-broom"></i>
+                            <i class="fas fa-broom" aria-hidden="true"></i>
                         </div>
                         <h3>Training and Support:</h3>
                         <p>
@@ -142,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-plug"></i>
+                            <i class="fas fa-plug" aria-hidden="true"></i>
                         </div>
                         <h3>Business Intelligence:</h3>
                         <p>
@@ -158,7 +159,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-chart-line" aria-hidden="true"></i>
                         </div>
                         <h3>Business Reporting:</h3>
                         <p>
@@ -173,7 +174,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="column">
                     <div class="card">
                         <div class="icon-wrapper">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
                         </div>
                         <h3>Cybersecurity Services:</h3>
                         <p>
@@ -191,8 +192,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <hr />
         </section>
 
-        <section id="advanced-data-analytics">
-            <h2>Advanced Data Analytics</h2>
+        <section id="advanced-data-analytics" aria-labelledby="ada-heading">
+            <h2 id="ada-heading">Advanced Data Analytics</h2>
             <p>
                 Our advanced data analytics services help you uncover hidden patterns,
                 trends, and correlations in your data, providing you with the insights
@@ -201,8 +202,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </p>
             <div class="wrapper">
                 <div class="more-service">
-                    <i class="fas fa-database"></i>
-                    <i class="fas fa-exchange-alt"></i>
+                    <i class="fas fa-database" aria-hidden="true"></i>
+                    <i class="fas fa-exchange-alt" aria-hidden="true"></i>
                     <h3>Data Integration and Data Warehousing</h3>
                     <p>
                         Extract, transform, load (ETL) or extract, load, transform (ELT)
@@ -213,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <a href="data-warehousing.html" class="learn-more-btn">Learn More</a> -->
                 </div>
                 <div class="more-service">
-                    <i class="fas fa-chart-pie"></i>
+                    <i class="fas fa-chart-pie" aria-hidden="true"></i>
                     <h3>Big Data</h3>
                     <p>
                         Big data infrastructure setup and support. Big data quality and
@@ -222,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <a href="big-data.html" class="learn-more-btn">Learn More</a> -->
                 </div>
                 <div class="more-service">
-                    <i class="fas fa-chart-line"></i>
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
                     <h3>Data Science</h3>
                     <p>
                         Data preparation and management. Development and tuning of machine
@@ -233,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <a href="data-science.html" class="learn-more-btn">Learn More</a> -->
                 </div>
                 <div class="more-service">
-                    <i class="fas fa-network-wired"></i>
+                    <i class="fas fa-network-wired" aria-hidden="true"></i>
                     <h3>Artificial Intelligence</h3>
                     <p>
                         Data gathering and cleansing for ML model training. ML modeling.
@@ -244,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section id="personalized-experiences">
+        <section id="personalized-experiences" aria-labelledby="personalized-heading">
             <div class="container">
                 <p>
                     It’s time to reimagine how customers experience your brand – to cultivate a customer-first culture
@@ -258,14 +259,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     growth. Whether you are looking to refine your existing strategies or embark on a complete CX
                     overhaul, Data Insights Solutions Ltd. is here to guide you every step of the way.
                 </p>
-                <h2>Personalized, Consistent Experiences at Scale</h2>
+                <h2 id="personalized-heading">Personalized, Consistent Experiences at Scale</h2>
             </div>
             <hr />
         </section>
 
-        <section id="excellence">
+        <section id="excellence" aria-labelledby="excellence-heading">
             <div class="container">
-                <h2>Providing Data Analytics Services with Excellence</h2>
+                <h2 id="excellence-heading">Providing Data Analytics Services with Excellence</h2>
                 <p>
                     With years of experience and mature project management practices, Data Insights Solutions Ltd.
                     ensures excellence in every project we undertake. Our approach includes domain-focused business
@@ -278,9 +279,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <hr />
         </section>
 
-        <section id="fast-solutions">
+        <section id="fast-solutions" aria-labelledby="fast-solutions-heading">
             <div class="wrapper">
-                <h2>
+                <h2 id="fast-solutions-heading">
                     Listen, Prioritize, and Act Fast
                 </h2>
                 <div class="focus-area">
@@ -322,8 +323,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section id="contact-get-started">
-            <h2>Contact Us to Get Started</h2>
+        <section id="contact-get-started" aria-labelledby="contact-cta-heading">
+            <h2 id="contact-cta-heading">Contact Us to Get Started</h2>
             <p>
                 We are excited to collaborate with you on your data analytics journey. To get started, please fill out
                 our brief contact form and provide a summary of your data analytics needs. Here is what you can expect
@@ -395,20 +396,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     class="fa-brands fa-square-instagram"></i>Instagram</a></li>
                         <li><a href="https://wa.me/2348037024787"><i
                                     class="fa-brands fa-square-whatsapp"></i>Whatsapp</a></li>
-                        <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope"></i>Email
+                        <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email
                                 Us</a></li>
 
                     </ul>
                 </section>
             </div>
         </div>
-        <div id="copyright " class="copyright">
-            <p>&copy; <a href="index.html">2024 Data Insight Solutions</a>. All rights reserved.</p>
+        <div class="copyright">
+            <p>&copy; <a href="index.html"><span id="copyright-year">2024</span> Data Insight Solutions</a>. All rights reserved.</p>
             <div class="designer">Design by <a href="#">ELORA</a>.</div>
         </div>
     </footer>
-    <div id="cookiePopup" class="hide">
-        <i class="fas fa-cookie-bite"></i>
+    <div id="cookiePopup" class="hide" role="region" aria-label="Cookie notice">
+        <i class="fas fa-cookie-bite" aria-hidden="true"></i>
         <p>
             Our website uses cookies to enhance your browsing experience and provide relevant information. By continuing
             to use our website, you agree to our
@@ -417,9 +418,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="cookie-policy.html">Cookie Policy</a>.
         </p>
         <div class="button-group">
-            <button id="acceptCookie">Accept</button>
-            <button id="declineCookie">Decline</button>
-            <button id="settingsCookie">Cookie Settings</button>
+            <button id="acceptCookie" type="button">Accept</button>
+            <button id="declineCookie" type="button">Decline</button>
+            <button id="settingsCookie" type="button">Cookie Settings</button>
         </div>
     </div>
 
@@ -429,4 +430,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </html>
 
-<!--   -->
