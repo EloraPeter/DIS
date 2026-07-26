@@ -27,9 +27,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
     </style>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -39,121 +41,107 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57VSG645"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <nav>
-        <a href="index.html"><img src="images/logo.png" alt="Data Insight Solutions logo" /></a>
+    <nav aria-label="Primary">
+        <a href="index.html" aria-label="Data Insight Solutions home"><img src="images/logo.png" alt="Data Insight Solutions logo" /></a>
         <div class="nav-links" id="navLinks">
-            <i class="fa-solid fa-xmark" id="closeMenu" onclick="hideMenu()"></i>
+            <i class="fa-solid fa-xmark" id="closeMenu" role="button" tabindex="0" aria-label="Close menu" onclick="hideMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){hideMenu()}"></i>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <!-- <li><a href="case-studies.html">Case Studies</a></li> -->
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
-        <i class="fa-solid fa-bars" id="openMenu" onclick="showMenu()"></i>
+        <i class="fa-solid fa-bars" id="openMenu" role="button" tabindex="0" aria-label="Open menu" onclick="showMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){showMenu()}"></i>
     </nav>
     <main id="faq-page">
-        <section id="faq">
-            <h1>Frequently Asked Questions</h1>
+        <section id="faq" aria-labelledby="faq-heading">
+            <h1 id="faq-heading">Frequently Asked Questions</h1>
             <div class="faq-section">
                 <div class="faq-item">
-                    <p class="faq-question">What services does Data Insights Solutions Ltd. offer? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">We offer comprehensive data analytics and consulting services, including data
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">What services does Data Insights Solutions Ltd. offer?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-1" role="region">We offer comprehensive data analytics and consulting services, including data
                         visualization, predictive analytics, business intelligence, data strategy consulting, and more.
                         Our
                         goal is to help businesses leverage their data for informed decision-making and sustained
-                        growth.
-                    </p>
+                        growth.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">How do I get started with your services? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">To get started, you can contact us through our website’s contact form, or
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">How do I get started with your services?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-2" role="region">To get started, you can contact us through our website’s contact form, or
                         email us
                         directly. We will schedule an initial consultation to understand your specific needs and tailor
                         our
                         services accordingly.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">What industries do you specialize in? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">We serve a wide range of industries, including finance, healthcare, retail,
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">What industries do you specialize in?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-3" role="region">We serve a wide range of industries, including finance, healthcare, retail,
                         manufacturing, and technology. Our team has the expertise to handle the unique data challenges
                         of
                         each industry.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">How do you ensure the confidentiality of our data? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">We take data confidentiality very seriously. We implement robust data security
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">How do you ensure the confidentiality of our data?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-4" role="region">We take data confidentiality very seriously. We implement robust data security
                         measures, including encryption, secure access controls, and compliance with industry standards,
                         to
                         ensure your data remains protected at all times.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">Can you customize your services to fit our business needs? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">Absolutely! We understand that every business has unique requirements, and we
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">Can you customize your services to fit our business needs?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-5" role="region">Absolutely! We understand that every business has unique requirements, and we
                         offer customized solutions that align with your specific goals and challenges.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">What tools and technologies do you use? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">We use a variety of advanced tools and technologies, including Python, R, SQL,
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">What tools and technologies do you use?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-6" role="region">We use a variety of advanced tools and technologies, including Python, R, SQL,
                         Tableau, Power BI, and machine learning frameworks. Our choice of tools depends on the project
                         requirements and the best fit for achieving optimal results.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">How do you communicate progress during a project? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">We believe in transparent communication. We provide regular updates through
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-7">How do you communicate progress during a project?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-7" role="region">We believe in transparent communication. We provide regular updates through
                         meetings, reports, and dashboards, ensuring that you are always informed about the progress of
                         your
                         project.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">What is your pricing structure? <i class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">Our pricing depends on the scope and complexity of the project. We offer
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-8">What is your pricing structure?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-8" role="region">Our pricing depends on the scope and complexity of the project. We offer
                         flexible
                         pricing models, including hourly rates, project-based pricing, and retainer agreements. We will
                         discuss and finalize the pricing during the consultation phase.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">How long does a typical project take? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">The duration of a project varies based on its complexity and scope. After
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-9">How long does a typical project take?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-9" role="region">The duration of a project varies based on its complexity and scope. After
                         assessing your requirements, we will provide a timeline and ensure that we meet the agreed
                         deadlines.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">Do you offer training or support after project completion? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">Yes, we provide training and support to ensure that your team can effectively
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-10">Do you offer training or support after project completion?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-10" role="region">Yes, we provide training and support to ensure that your team can effectively
                         utilize the solutions we implement. Our goal is to empower your team to maximize the value of
                         your
                         data in the long term.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">Can you help us integrate data from multiple sources? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">Yes, we specialize in integrating data from diverse sources, including
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-11">Can you help us integrate data from multiple sources?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-11" role="region">Yes, we specialize in integrating data from diverse sources, including
                         databases,
                         APIs, and third-party platforms. We ensure that your data is unified and accessible for
-                        analysis.
-                    </p>
+                        analysis.</p>
                 </div>
                 <div class="faq-item">
-                    <p class="faq-question">How do I contact you for further inquiries? <i
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <p class="faq-answer">You can reach us via our website’s contact form, email, or phone. Our team is
+                    <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-12">How do I contact you for further inquiries?<i class="fa-solid fa-chevron-down" aria-hidden="true"></i></button>
+                    <p class="faq-answer" id="faq-answer-12" role="region">You can reach us via our website’s contact form, email, or phone. Our team is
                         always ready to answer your questions and assist you with your data needs.</p>
                 </div>
             </div>
         </section>
-        <section id="contact-us-info">
-            <h2>Can't Find the Answer You're Looking For?</h2>
+        <section id="contact-us-info" aria-labelledby="faq-contact-heading">
+            <h2 id="faq-contact-heading">Can't Find the Answer You're Looking For?</h2>
             <p>
                 If you didn't find the answer to your question in our FAQ section, we're here to help! Please feel free
                 to reach out to us directly. You can contact us through our <a href="contact.html">Contact Us</a> page,
@@ -161,8 +149,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 priority, and we're always happy to provide the information you need.
             </p>
         </section>
-        <div id="cookiePopup" class="hide">
-            <i class="fas fa-cookie-bite"></i>
+        <div id="cookiePopup" class="hide" role="region" aria-label="Cookie notice">
+            <i class="fas fa-cookie-bite" aria-hidden="true"></i>
             <p>
                 Our website uses cookies to enhance your browsing experience and provide
                 relevant information. By continuing to use our website, you agree to our
@@ -171,9 +159,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="cookie-policy.html">Cookie Policy</a>.
             </p>
             <div class="button-group">
-                <button id="acceptCookie">Accept</button>
-                <button id="declineCookie">Decline</button>
-                <button id="settingsCookie">Cookie Settings</button>
+                <button id="acceptCookie" type="button">Accept</button>
+                <button id="declineCookie" type="button">Decline</button>
+                <button id="settingsCookie" type="button">Cookie Settings</button>
             </div>
         </div>
     </main>
@@ -222,16 +210,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     class="fa-brands fa-square-instagram"></i>Instagram</a></li>
                         <li><a href="https://wa.me/2348037024787"><i
                                     class="fa-brands fa-square-whatsapp"></i>Whatsapp</a></li>
-                        <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope"></i>Email
+                        <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email
                                 Us</a></li>
 
                     </ul>
                 </section>
             </div>
         </div>
-        <div id="copyright " class="copyright">
+        <div class="copyright">
             <p>
-                &copy; <a href="index.html">2024 Data Insight Solutions</a>. All
+                &copy; <a href="index.html"><span id="copyright-year">2024</span> Data Insight Solutions</a>. All
                 rights reserved.
             </p>
             <div class="designer">Design by <a href="#">ELORA</a>.</div>
