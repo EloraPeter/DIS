@@ -279,3 +279,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Dynamic copyright year (2024–current year)
+const copyrightYearEl = document.getElementById('copyright-year');
+if (copyrightYearEl) {
+    const startYear = 2024;
+    const currentYear = new Date().getFullYear();
+    copyrightYearEl.textContent = currentYear > startYear ? `${startYear}–${currentYear}` : `${startYear}`;
+}
