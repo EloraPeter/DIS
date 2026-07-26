@@ -26,9 +26,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap');
   </style>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -39,9 +41,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-  <section id="cookie-policy">
+      <nav aria-label="Primary">
+        <a href="index.html" aria-label="Data Insight Solutions home"><img src="images/logo.png" alt="Data Insight Solutions logo" /></a>
+        <div class="nav-links" id="navLinks">
+            <i class="fa-solid fa-xmark" id="closeMenu" role="button" tabindex="0" aria-label="Close menu" onclick="hideMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){hideMenu()}"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars" id="openMenu" role="button" tabindex="0" aria-label="Open menu" onclick="showMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){showMenu()}"></i>
+    </nav>
+  <section id="cookie-policy" aria-labelledby="cookie-heading">
     <div class="container">
-      <h1>Cookie Policy</h1>
+      <h1 id="cookie-heading">Cookie Policy</h1>
 
       <p><strong>Effective Date:</strong> 12th August, 2024</p>
 
@@ -153,16 +168,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 class="fa-brands fa-square-instagram"></i>Instagram</a></li>
                     <li><a href="https://wa.me/2348037024787"><i
                                 class="fa-brands fa-square-whatsapp"></i>Whatsapp</a></li>
-                    <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope"></i>Email
+                    <li><a href="mailto:contact@datainsightsolution.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email
                             Us</a></li>
 
                 </ul>
             </section>
         </div>
     </div>
-    <div id="copyright " class="copyright">
+    <div class="copyright">
         <p>
-            &copy; <a href="index.html">2024 Data Insight Solutions</a>. All
+            &copy; <a href="index.html"><span id="copyright-year">2024</span> Data Insight Solutions</a>. All
             rights reserved.
         </p>
         <div class="designer">Design by <a href="#">ELORA</a>.</div>
