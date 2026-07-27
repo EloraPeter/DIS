@@ -1313,10 +1313,9 @@ header #hero .hero-btn:active {
     padding: 50px 6%;
     align-items: flex-start;
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     margin: auto;
     position: relative;
-    overflow: hidden;
 }
 
 #CEO .content {
@@ -1324,6 +1323,7 @@ header #hero .hero-btn:active {
     max-width: 50%;
     margin-left: 0;
     position: relative;
+    display: grid;
 }
 
 #CEO h2 {
@@ -1337,15 +1337,16 @@ header #hero .hero-btn:active {
     z-index: 1;
 }
 
+/* All rotating quotes occupy the same grid cell — the row height is set
+   by the CSS grid to whichever quote is tallest, so nothing is ever
+   clipped no matter how long a given quote runs (previously a fixed
+   height:200px box cut off longer text). */
 #CEO .content p {
+    grid-area: 1 / 1;
+    align-self: center;
     opacity: 0;
     transform: translateX(-24px);
     transition: opacity 0.8s ease, transform 0.6s ease;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
     width: 100%;
     font-size: 1.15rem;
     font-weight: 500;
@@ -1357,11 +1358,13 @@ header #hero .hero-btn:active {
     box-shadow: var(--shadow-sm);
     padding: 1.75rem 2rem;
     text-align: left;
+    pointer-events: none;
 }
 
 #CEO .content p.visible {
     opacity: 1;
     transform: translateX(0);
+    pointer-events: auto;
 }
 
 #CEO .image {
@@ -1393,7 +1396,6 @@ header #hero .hero-btn:active {
 
     #CEO .content p {
         font-size: 20px;
-        height: 200px;
     }
 
     #CEO .image {
@@ -1405,7 +1407,7 @@ header #hero .hero-btn:active {
 @media (max-width: 1199px) {
     #CEO .wrapper {
         padding: 40px;
-        height: 25rem;
+        min-height: 25rem;
     }
 
     #CEO h2 {
@@ -1415,7 +1417,6 @@ header #hero .hero-btn:active {
 
     #CEO .content p {
         font-size: 18px;
-        height: auto;
     }
 
     #CEO .image {
@@ -1429,7 +1430,7 @@ header #hero .hero-btn:active {
         flex-direction: column;
         align-items: center;
         padding: 30px;
-        height: 45rem;
+        min-height: 0;
     }
 
     #CEO h2 {
@@ -1439,15 +1440,14 @@ header #hero .hero-btn:active {
     }
 
     #CEO .content {
-        width: 150%;
+        width: 100%;
+        max-width: 100%;
         padding-top: 1rem;
         margin: 0;
     }
 
     #CEO .content p {
         font-size: 16px;
-        height: auto;
-        padding-bottom: 100px;
     }
 
     #CEO .image {
@@ -1467,9 +1467,8 @@ header #hero .hero-btn:active {
     }
 
     #CEO .content p {
-        padding-top: 20px;
+        padding: 1.25rem 1.5rem;
         font-size: 16px;
-        height: auto;
     }
 
     #CEO .image {
@@ -1491,7 +1490,6 @@ header #hero .hero-btn:active {
 
     #CEO .content p {
         font-size: 14px;
-        height: auto;
     }
 
     #CEO .image {
@@ -1504,7 +1502,7 @@ header #hero .hero-btn:active {
     #CEO .wrapper {
         padding: 1.25rem;
         margin: 0;
-        height: 40rem;
+        min-height: 0;
     }
 
     #CEO h2 {
@@ -1514,18 +1512,17 @@ header #hero .hero-btn:active {
     }
 
     #CEO .content {
+        width: 100%;
         padding-top: 20px;
         margin-bottom: 30px;
         margin-top: 0;
     }
 
     #CEO .content p {
-        width: 65vw;
+        width: 100%;
         font-size: 12px;
-        height: auto;
         margin: 0;
-        padding: 0;
-
+        padding: 1rem 1.1rem;
     }
 
     #CEO .image {
@@ -1579,6 +1576,7 @@ header #hero .hero-btn:active {
 
 #mission-vision-value .col img {
     width: 100%;
+    min-height: 260px;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     display: block;
