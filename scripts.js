@@ -40,24 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(hr);
     });
 
-    // Rotating paragraphs in CEO section
-    const paragraphs = document.querySelectorAll("#CEO .content p");
-    let currentIndex = 0;
-
-    function showNextParagraph() {
-        if (paragraphs.length > 0) {
-            paragraphs[currentIndex].classList.add("visible");
-
-            setTimeout(() => {
-                paragraphs[currentIndex].classList.remove("visible");
-                currentIndex = (currentIndex + 1) % paragraphs.length; // Loop back to the first paragraph
-                showNextParagraph();
-            }, 10000); // Adjust this duration as needed for visibility time
-        }
-    }
-
-    showNextParagraph();
-
     // Cookie popup functionality
     let popUp = document.getElementById("cookiePopup");
 
@@ -217,56 +199,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// mission, vision and value section
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll('#mission-vision-value .layer');
-
-    // Function to apply IntersectionObserver only on small screens
-    function applyIntersectionObserver() {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                } else {
-                    entry.target.classList.remove('in-view');
-                }
-            });
-        });
-
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    }
-
-    // Apply hover effect on larger screens
-    function applyHoverEffect() {
-        elements.forEach(element => {
-            element.parentElement.addEventListener('mouseenter', function () {
-                element.classList.add('in-view');
-            });
-            element.parentElement.addEventListener('mouseleave', function () {
-                element.classList.remove('in-view');
-            });
-        });
-    }
-
-    // Check screen size and apply appropriate behavior
-    if (window.innerWidth <= 768) {
-        applyIntersectionObserver(); // Apply scroll-into-view effect for smaller screens
-    } else {
-        applyHoverEffect(); // Apply hover effect for larger screens
-    }
-
-    // Optional: Re-check on window resize (only needed if you expect users to resize their browser)
-    window.addEventListener('resize', function () {
-        if (window.innerWidth <= 768) {
-            applyIntersectionObserver();
-        } else {
-            applyHoverEffect();
-        }
-    });
-});
-
 // frequently asked question
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.faq-question').forEach(question => {
@@ -279,10 +211,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Dynamic copyright year (2024–current year)
-const copyrightYearEl = document.getElementById('copyright-year');
-if (copyrightYearEl) {
-    const startYear = 2024;
-    const currentYear = new Date().getFullYear();
-    copyrightYearEl.textContent = currentYear > startYear ? `${startYear}–${currentYear}` : `${startYear}`;
-}
